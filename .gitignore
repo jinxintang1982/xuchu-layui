@@ -1,0 +1,10 @@
+# Package Files #
+.settings
+.project
+.classpath
+.idea
+target
+build
+*.iml
+.cache
+logs
