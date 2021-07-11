@@ -1,11 +1,4 @@
-server:
-  port: 8082
-
 spring:
-  application:
-    name: xuchu_layui_table
-
-
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver

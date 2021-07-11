@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="x-admin-sm">
+<head>
+    <meta charset="UTF-8">
+    <title>得物AGV智能物流配送</title>
+    <script src="./xAdminFrame/common.js"></script>
+
+</head>
+<body class="index">
+<!-- 顶部开始 -->
+<div class="container">
+    <div class="logo">
+        <a href="">得物AGV智能物流配送</a>
+    </div>
+
+    <div class="left_open">
+        <a><i title="展开左侧栏" class="iconfont">&#xe699;</i></a>
+    </div>
+</div>
+
+<div class="left-nav">
+    <div id="side-nav">
+        <ul id="nav">
+            <li>
+                <a href="javascript:">
+                    <i class="iconfont left-nav-li" lay-tips="添加任务">&#xe6ae;</i>
+                    <cite>功能菜单</cite>
+                    <i class="iconfont nav_right">&#xe6a7;</i></a>
+                <ul class="sub-menu">
+                    <li>
+                        <a onclick="xadmin.add_tab('修改系统参数','./app/views/business/paramsManger.html')">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>修改系统参数</cite></a>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="page-content">
+    <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
+        <ul class="layui-tab-title">
+            <li class="home">
+                <i class="layui-icon">&#xe68e;</i>我的桌面
+            </li>
+        </ul>
+        <div class="layui-unselect layui-form-select layui-form-selected" id="tab_right">
+            <dl>
+                <dd data-type="this">关闭当前</dd>
+                <dd data-type="other">关闭其它</dd>
+                <dd data-type="all">关闭全部</dd>
+            </dl>
+        </div>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <iframe src='/welcome.html' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+            </div>
+        </div>
+        <div id="tab_show"></div>
+    </div>
+</div>
+
+<div class="page-content-bg"></div>
+</body>
+<script>
+
+</script>
+</html>
