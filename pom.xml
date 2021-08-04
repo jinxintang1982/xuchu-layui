@@ -9,6 +9,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>xuchu-layui-table</module>
+        <module>xuchu-layui-layout</module>
+        <module>xuchu-layui-component</module>
     </modules>
 
     <packaging>pom</packaging>
