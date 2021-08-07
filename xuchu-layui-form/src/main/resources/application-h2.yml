@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.h2.Driver
+    # h2 本地存储模式
+    #url: jdbc:h2:~/test:myDb;MODE=MySQL;DATABASE_TO_LOWER=TRUE;USER=sa
+    # h2 内存模式 库名: myDb
+    url: jdbc:h2:mem:myDb;MODE=MySQL;DATABASE_TO_LOWER=TRUE;USER=sa
+    schema: classpath:sql/init.sql
+    data: classpath:sql/data.sql
+
+  h2:
+    console:
+      enabled: true
+      settings:
+        # 开启h2 console 跟踪 方便调试  默认 false
+        trace: true
+        # 允许console 远程访问 默认false
+        web-allow-others: true
+      path: /h2Console
+
+
