@@ -12,25 +12,25 @@
 })(window);
 
 function init() {
+    let projectPath = getPathName();
 
     document.write('<meta http-equiv="Expires" content="0">');
     document.write('<meta http-equiv="Pragma" content="no-cache">');
     document.write('<meta http-equiv="Cache-control" content="no-cache">');
     document.write('<meta http-equiv="Cache" content="no-cache">');
 
-    document.write('<link rel="stylesheet" href="/xAdminFrame/xadmin2.2/css/font.css?v=">');
-    document.write('<link rel="stylesheet" href="/xAdminFrame/xadmin2.2/css/login.css?v=">' );
-    document.write('<link rel="stylesheet" href="/xAdminFrame/xadmin2.2/css/xadmin.css?v=">' );
-    document.write('<link rel="stylesheet" href="/xAdminFrame/xadmin2.2/css/theme5.css?v=">' );
+    document.write('<link rel="stylesheet" href="' + projectPath + '/xAdminFrame/xadmin2.2/css/font.css?v=">');
+    document.write('<link rel="stylesheet" href="' + projectPath + '/xAdminFrame/xadmin2.2/css/login.css?v=">' );
+    document.write('<link rel="stylesheet" href="' + projectPath + '/xAdminFrame/xadmin2.2/css/xadmin.css?v=">' );
+    document.write('<link rel="stylesheet" href="' + projectPath + '/xAdminFrame/xadmin2.2/css/theme5.css?v=">' );
 
-    document.write('<script type="text/javascript" src="/xAdminFrame/xadmin2.2/lib/layui/layui.js?v=" charset="utf-8"></script>' );
-    document.write('<script type="text/javascript" src="/xAdminFrame/xadmin2.2/js/jquery.min.js?v="></script>' );
-    document.write('<script type="text/javascript" src="/xAdminFrame/xadmin2.2/js/xadmin.js?v="></script>' );
+    document.write('<script type="text/javascript" src="' + projectPath + '/xAdminFrame/xadmin2.2/lib/layui/layui.js?v=" charset="utf-8"></script>' );
+    document.write('<script type="text/javascript" src="' + projectPath + '/xAdminFrame/xadmin2.2/js/jquery.min.js?v="></script>' );
+    document.write('<script type="text/javascript" src="' + projectPath + '/xAdminFrame/xadmin2.2/js/xadmin.js?v="></script>' );
 
-    document.write('<script type="text/javascript" src="/js/commonJs.js?"></script>');
-    document.write('<script type="text/javascript" src="/js/EnumUtils.js"></script>' );
+    document.write('<script type="text/javascript" src="' + projectPath + '/js/commonJs.js?"></script>');
+    document.write('<script type="text/javascript" src="' + projectPath + '/js/EnumUtils.js"></script>' );
     window.DEFAULT_PAGE_SIZE = 10;
-
 }
 
 function getPathName() {
