@@ -14,7 +14,7 @@
             this.add = function (selectId, enumKey, defaultValue) {
                 enumKeys.push({key: enumKey});
                 defaultValue = defaultValue == null || defaultValue == undefined ? "" : defaultValue;
-                cache.push({"selectId": selectId, "enumKey": enumKey, "defaultValue": defaultValue})
+                cache.push({"selectId": selectId, "enumKey": enumKey, "defaultValue": defaultValue});
                 return this;
             };
 
