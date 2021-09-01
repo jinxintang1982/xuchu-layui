@@ -9,8 +9,10 @@ layui.use(["jquery", "form", "laydate"], function () {
             type: "get",
             success: function (res) {
                 console.info("res = ",res);
-
+                //初始化下来列表
                 initFormSelect(res);
+                //初始化checkBox
+                initCheckBox(res);
                 form.val("filEditForm", res);
             }
         });
@@ -23,6 +25,13 @@ layui.use(["jquery", "form", "laydate"], function () {
         , format: "yyyy-MM-dd"
     });
 
+    function inintCheckBox(res) {
+        if(res.switchBool === true){
+            $("#switchBool").attr("checked","checked");//未测试
+        }else {
+            $("#switchBool").removeAttr("checked");//未测试
+        }
+    }
     // 下拉
     function initFormSelect(data) {
         let enumSelect = new util.FormEnumOption()

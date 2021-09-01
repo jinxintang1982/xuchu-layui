@@ -16,4 +16,5 @@ public class ResponseEdit {
     private String email;
     private String arriveDate;
     private Integer lockStatus;
+    private boolean switchBool;
 }
