@@ -21,8 +21,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 public class MegviiApplication extends SpringBootServletInitializer {
 
-
-
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 
@@ -30,7 +28,9 @@ public class MegviiApplication extends SpringBootServletInitializer {
     }
 
     public static void main(String[] args) {
+
         SpringApplication.run(MegviiApplication.class, args);
+        System.out.println("~~~~~~~~table~~~~~~~~~");
     }
 
     @Bean
