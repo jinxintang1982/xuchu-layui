@@ -1,6 +1,8 @@
 package sanguo.xuchu.layui.domain.db.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
+import sanguo.xuchu.layui.controller.dto.RequestQueryPage;
 import sanguo.xuchu.layui.domain.db.entity.TStation;
 
 /**
@@ -12,5 +14,5 @@ import sanguo.xuchu.layui.domain.db.entity.TStation;
  * @since 2021-06-10
  */
 public interface ITStationService extends IService<TStation> {
-
+    IPage<TStation> listPage(RequestQueryPage query);
 }

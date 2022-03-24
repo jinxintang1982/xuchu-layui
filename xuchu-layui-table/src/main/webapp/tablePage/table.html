@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+<head>
+    <meta charset="UTF-8">
+    <title>CST后台</title>
+    <script src="/xAdminFrame/common.js"></script>
+</head>
+<body>
+
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <table class="layui-hide" id="myTable" lay-filter="myTable"></table>
+        </div>
+    </div>
+</div>
+<script>
+
+    // 单独js
+    document.write("<script src='./table.js?v=" + 1 + "'><" + '/' + "script>");
+</script>
+</body>
+</html>

@@ -33,8 +33,6 @@ public class TStation implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-
-
     /**
      * 名称
      */
@@ -71,6 +69,4 @@ public class TStation implements Serializable {
      * 记录更新时间
      */
     private LocalDateTime updateTime;
-
-
 }

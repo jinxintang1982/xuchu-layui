@@ -26,12 +26,20 @@ layui.use(["table", "jquery", "form", "laydate"], function () {
                 return {
                     "code": res.code,
                     "msg": res.msg,
-                    "data": res.data
+                    "data": res.data.data,
+                    "count": res.data.total, //解析数据长度
                 }
             },
-            id: "myTable",
-            url: "/station/list",
+            elem: '#myTable',
+            url: "/station/listPage",
             title: "运输任务配置",
+
+            request: {
+                pageName: 'currentPage', //页码的参数名称，默认：page
+                limitName: 'pageSize' //每页数据量的参数名，默认：limit
+            },
+            page: true, //开启分页
+
         };
         table.render(option);
     }
