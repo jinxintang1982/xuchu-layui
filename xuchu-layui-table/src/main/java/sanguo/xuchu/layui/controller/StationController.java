@@ -3,6 +3,7 @@ package sanguo.xuchu.layui.controller;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import sanguo.xuchu.layui.common.DataResult;
@@ -32,7 +33,7 @@ public class StationController {
     }
 
     @RequestMapping(value = "/listPage")
-    public DataResult<PageResult<TStation>> listPage(RequestQueryPage query) {
+    public DataResult<PageResult<TStation>> listPage(@RequestBody RequestQueryPage query) {
         IPage<TStation> actionData =  itStationService.listPage(query);
 
         PageResult<TStation> pageResult = new PageResult<>();
