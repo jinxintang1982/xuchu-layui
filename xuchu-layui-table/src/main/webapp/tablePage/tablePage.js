@@ -33,7 +33,9 @@ layui.use(["table", "jquery", "form", "laydate"], function () {
             elem: '#myTable',
             url: "/station/listPage",
             title: "运输任务配置",
-
+            method: 'POST',
+            dataType: 'json',
+            contentType: "application/json",
             request: {
                 pageName: 'currentPage', //页码的参数名称，默认：page
                 limitName: 'pageSize' //每页数据量的参数名，默认：limit

@@ -8,12 +8,15 @@ layui.use(["table", "jquery", "form", "laydate"], function () {
     // 初始化表格
     initTable();
     //执行一个laydate实例
-    ldate.render({
+    laydate.render({
         elem: '#start' ,//指定元素
-        type: 'datetime'
+        type: 'date'
     });
 
-    initSelect(form);//订单状态
+    laydate.render({
+        elem: '#end' ,//指定元素
+        type: 'datetime'
+    });
 
     initEvent(form, table);//
 
@@ -42,12 +45,22 @@ layui.use(["table", "jquery", "form", "laydate"], function () {
                 return {
                     "code": res.code,
                     "msg": res.msg,
-                    "data": res.data
+                    "data": res.data.data,
+                    "count": res.data.total, //解析数据长度
                 }
             },
+
             elem: '#myTable',
-            url: "/station/list",
+            url: "/station/listPage",
             title: "运输任务配置",
+            method: 'POST',
+            dataType: 'json',
+            contentType: "application/json",
+            request: {
+                pageName: 'currentPage', //页码的参数名称，默认：page
+                limitName: 'pageSize' //每页数据量的参数名，默认：limit
+            },
+            page: true, //开启分页
         };
         table.render(option);
     }
