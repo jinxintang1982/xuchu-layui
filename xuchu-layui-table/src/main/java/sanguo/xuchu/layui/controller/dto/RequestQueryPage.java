@@ -6,6 +6,7 @@ import lombok.Data;
 public class RequestQueryPage {
     private String no;
     private String name;
+    private Integer taskType;
     private String beginDate;
     private String endDate;
     private Integer currentPage;

@@ -12,6 +12,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import sanguo.xuchu.layui.common.enumsCache.EnumsCache;
 
 
 @EnableAsync
@@ -30,6 +31,10 @@ public class MegviiApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {
 
         SpringApplication.run(MegviiApplication.class, args);
+        // 枚举缓存
+        String basePackage = "sanguo.xuchu.layui";
+        EnumsCache.init(basePackage);
+
         System.out.println("~~~~~~~~table~~~~~~~~~");
     }
 

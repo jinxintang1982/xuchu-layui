@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+<head>
+    <meta charset="UTF-8">
+    <title>CST后台</title>
+    <script src="/xAdminFrame/common.js"></script>
+</head>
+<body>
+
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <fieldset class="layui-elem-field" style="padding-left: 10px">
+                <legend>查询条件</legend>
+                <form class="layui-form"> <!-- 提示：如果你不想用form，你可以换成div等任何一个普通元素 -->
+                    <div class="layui-form-item">
+                        <div class="layui-inline ">
+                            <input class="layui-input" autocomplete="off" placeholder="创建时间" name="beginDate"
+                                   id="start">
+                        </div>
+                        ~
+                        <div class="layui-inline ">
+                            <input class="layui-input" autocomplete="off" placeholder="创建时间" name="endDate"
+                                   id="end">
+                        </div>
+
+                        <div class="layui-inline">
+                            <label class="layui-form-label">名称</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="name" placeholder="请输入名称" autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                        </div>
+
+                        <div class="layui-inline">
+                            <label class="layui-form-label" style="width: 100px">任务类型:</label>
+                            <div class="layui-input-inline" style="width: 150px">
+                                <select id="taskType" name="taskType">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="layui-inline ">
+                            <a id="search" class="layui-btn" lay-submit lay-filter="search"><i
+                                    class="layui-icon">&#xe615;</i>查询</a>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+            <table class="layui-hide" id="myTable" lay-filter="myTable"></table>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 单独js
+    document.write("<script src='./tableEnum.js?v=" + 1 + "'><" + '/' + "script>");
+</script>
+
+</body>
+</html>

@@ -27,8 +27,10 @@ public class TStationServiceImpl extends ServiceImpl<TStationMapper, TStation> i
     @Override
     public IPage<TStation> listPage(RequestQueryPage query) {
         LambdaQueryWrapper<TStation> queryWrapper = Wrappers.lambdaQuery();
-        queryWrapper.eq(!StringUtils.isEmpty(query.getName()), TStation::getName, query.getName());
-        queryWrapper.eq(!StringUtils.isEmpty(query.getNo()), TStation::getNo, query.getNo());
+        queryWrapper.eq(!StringUtils.isEmpty(query.getName()), TStation::getName, query.getName())
+                .eq(!StringUtils.isEmpty(query.getNo()), TStation::getNo, query.getNo())
+                .eq(!StringUtils.isEmpty(query.getTaskType()), TStation::getType, query.getTaskType());
+
         return page(new Page<>(query.getCurrentPage(), query.getPageSize()), queryWrapper);
     }
 }
