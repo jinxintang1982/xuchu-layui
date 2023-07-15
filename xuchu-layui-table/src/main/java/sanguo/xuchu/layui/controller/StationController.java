@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import sanguo.xuchu.layui.common.DataResult;
 import sanguo.xuchu.layui.common.PageResult;
+import sanguo.xuchu.layui.controller.dto.RequestCommit;
 import sanguo.xuchu.layui.controller.dto.RequestQueryPage;
 import sanguo.xuchu.layui.domain.db.entity.TStation;
 import sanguo.xuchu.layui.domain.db.service.ITStationService;
@@ -43,7 +44,17 @@ public class StationController {
 
     }
 
+    @RequestMapping(value = "/finish")
+    public DataResult finish(String no) {
+        log.info("finish no = {}" ,no );
+        return DataResult.success();
+    }
 
+    @RequestMapping(value = "/cancel")
+    public DataResult cancel(@RequestBody RequestCommit commit) {
+        log.info("cancel = {}", commit);
+        return DataResult.success();
+    }
 }
 
 
